@@ -17,7 +17,7 @@ num_features <- ncol(evictions)
 # Create a table (data frame) of evictions by zip code (sort descending)
 by_zip_code <- 
   group_by(Eviction.Notice.Source.Zipcode) %>% 
-  count() %>% #count how many tips a zipcode appears
+  count() %>% #counts how many tips a zipcode appears
   arrange(-n)
   top_n(10, wt = n)
   
